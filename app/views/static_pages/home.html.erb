@@ -1,4 +1,39 @@
-<h1>StaticPages#home</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Title</title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>StaticPages#home</h1>
+    
+    <h1>Hello World!</h1>
+    <p>Find me in app/views/static_pages/home.html.erb</p>
+    <button type="submit" class="btn btn-primary">Submit</button>
 
-<h1>Hello World!</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+    <a class="btn btn-primary">Do it</a>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "sample app", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "Help",    '#' %></li>
+              <li><%= link_to "Sign in", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
