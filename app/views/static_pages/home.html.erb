@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Title</title>
+    <title>Truncatus</title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -9,14 +9,27 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script>document.write('<' + 'script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
   </head>
   <body>
-    <h1>StaticPages#home</h1>
-    
-    <h1>Hello World!</h1>
-    <p>Find me in app/views/static_pages/home.html.erb</p>
-    <button type="submit" class="btn btn-primary">Submit</button>
-
-    <a class="btn btn-primary">Do it</a>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="row col-md-12">
+          <div class="col-md-5">
+            <h1>Truncatus</h1>
+            <h2>Tactical Team Communication</h2>
+            <p>Share company information and enjoy it!</p>
+          </div>
+          <div class="col-md-5">
+            <%= image_tag("dolphins-small.jpg", alt: "Dolphins")%>
+          </div>
+        </div>
+        <p>
+          <a class="btn btn-primary">Learn more »</a>
+        </p>
+      </div>
+    </div>
+    <p>app/views/static_pages/home.html.erb</p>
   </body>
 </html>
