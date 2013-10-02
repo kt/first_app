@@ -15,11 +15,11 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <div class="row col-md-12">
+        <div class="row">
           <div class="col-md-5">
             <h1>Truncatus</h1>
             <h2>Tactical Team Communication</h2>
-            <p>Share company information and enjoy it!</p>
+            <p>Share with your team and enjoy it!</p>
           </div>
           <div class="col-md-5">
             <%= image_tag("dolphins-small.jpg", alt: "Dolphins")%>
@@ -27,6 +27,7 @@
         </div>
         <p>
           <a class="btn btn-primary">Learn more »</a>
+          <%= link_to "Sign up now!", signup_path, class: "btn btn-primary"%>
         </p>
       </div>
     </div>
